@@ -1,0 +1,194 @@
+body {
+  background-color: #111319;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+#first {
+  height: 100vh;
+}
+
+.elements {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.elements > div {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+#rectangle {
+  background: #ffa71a;
+}
+
+#circle {
+  background: #8e1dff;
+  border-radius: 50%;
+}
+
+#triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #14c0ff;
+}
+
+.intro {
+  z-index: 1;
+  max-width: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro-title-1,
+.intro-title-2 {
+  font-size: 70px;
+}
+
+.intro-title-1 {
+  font-weight: lighter;
+  margin-bottom: -50px;
+}
+
+.intro-text {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.intro-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.intro-buttons > button {
+  padding: 12px 32px;
+  border-radius: 40px;
+  border: 0;
+  text-decoration: underline;
+  font-size: 14px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+#intro-button-web {
+  background-color: #ffa71a;
+}
+
+#intro-button-mail {
+  background-color: #8e1dff;
+}
+
+#intro-button-photo {
+  background-color: #14c0ff;
+}
+
+.bg-elements > div {
+  position: absolute;
+  z-index: 0;
+}
+
+#rectangle-1,
+#rectangle-2,
+#rectangle-3,
+#rectangle-4 {
+  background: #ffa71a;
+}
+
+#rectangle-1 {
+  width: 300px;
+  height: 300px;
+  top: -25%;
+  right: 10%;
+  transform: rotate(54deg);
+}
+
+#rectangle-2 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 40%;
+  transform: rotate(18deg);
+  opacity: 0.3;
+}
+
+#rectangle-3 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 20%;
+  transform: rotate(10deg);
+  opacity: 0.3;
+}
+
+#rectangle-4 {
+  width: 300px;
+  height: 300px;
+  top: 90%;
+  left: 30%;
+  transform: rotate(-20deg);
+}
+
+#circle-1,
+#circle-2,
+#circle-3,
+#circle-4 {
+  background: #8e1dff;
+  border-radius: 50%;
+}
+
+#circle-1 {
+  width: 220px;
+  height: 220px;
+  top: -5%;
+  left: 10%;
+}
+
+#circle-2 {
+  width: 260px;
+  height: 260px;
+  top: 10%;
+  right: 25%;
+  opacity: 0.3;
+}
+
+#circle-3 {
+  width: 140px;
+  height: 140px;
+  top: 50%;
+  right: 25%;
+  opacity: 0.3;
+}
+
+#circle-4 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 25%;
+  opacity: 0.3;
+}
+
+#triangle-1 {
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #14c0ff;
+  top: 50%;
+  right: 5%;
+  transform: rotate(20deg);
+}
