@@ -1,12 +1,40 @@
 body {
-  background-color: #111319;
-  color: white;
   font-family: "Courier New", Courier, monospace;
   margin: 0;
+  color: white;
+}
+
+.bg {
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    -45deg,
+    #211604 0%,
+    #1e95c1 25%,
+    #ffa71a 51%,
+    #490a88 100%
+  );
+  animation: AnimateBG 30s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #first {
   height: 100vh;
+  z-index: 1;
 }
 
 .elements {
@@ -19,7 +47,6 @@ body {
 .elements > div {
   width: 20px;
   height: 20px;
-  z-index: 1;
 }
 
 #rectangle {
@@ -85,6 +112,38 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   box-shadow: 1px 1px 20px 10px rgb(0, 0, 0, 0.1);
+  cursor: not-allowed;
+}
+
+.intro-buttons > button:active {
+  animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@keyframes shake-bottom {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
 }
 
 #intro-button-web {
@@ -114,6 +173,7 @@ body {
 .bg-elements > * {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
+  filter: blur(3px);
 }
 
 @keyframes change-1 {
