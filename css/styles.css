@@ -43,7 +43,7 @@ body {
   z-index: 1;
   max-width: 70%;
   position: relative;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -72,6 +72,7 @@ body {
   justify-content: center;
   gap: 30px;
   padding-top: 30px;
+  flex-wrap: wrap;
 }
 
 .intro-buttons > button {
@@ -188,7 +189,19 @@ body {
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   border-bottom: 200px solid #14c0ff;
-  top: 50%;
+  top: 30%;
   right: 5%;
   transform: rotate(20deg);
+  opacity: 0.3;
+}
+
+#triangle-2 {
+  width: 0px;
+  height: 0px;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 240px solid #14c0ff;
+  bottom: 0;
+  right: 5%;
+  transform: rotate(50deg);
 }
