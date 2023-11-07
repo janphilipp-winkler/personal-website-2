@@ -76,14 +76,15 @@ body {
 }
 
 .intro-buttons > button {
-  padding: 12px 32px;
+  padding: 18px 32px;
   border-radius: 40px;
   border: 0;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+  box-shadow: 1px 1px 20px 10px rgb(0, 0, 0, 0.1);
 }
 
 #intro-button-web {
@@ -110,12 +111,40 @@ body {
   background: #ffa71a;
 }
 
+.bg-elements > * {
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes change-1 {
+  to {
+    opacity: 0.2;
+    rotate: 20deg;
+  }
+}
+
+@keyframes change-2 {
+  to {
+    opacity: 0.6;
+    rotate: -30deg;
+  }
+}
+
+@keyframes change-3 {
+  to {
+    opacity: 0.5;
+    rotate: 25deg;
+  }
+}
+
 #rectangle-1 {
   width: 300px;
   height: 300px;
   top: -25%;
   right: 10%;
   transform: rotate(54deg);
+  animation-name: change-1;
+  animation-duration: 8s;
 }
 
 #rectangle-2 {
@@ -125,6 +154,8 @@ body {
   left: 40%;
   transform: rotate(18deg);
   opacity: 0.3;
+  animation-name: change-2;
+  animation-duration: 7s;
 }
 
 #rectangle-3 {
@@ -134,6 +165,8 @@ body {
   left: 20%;
   transform: rotate(10deg);
   opacity: 0.3;
+  animation-name: change-3;
+  animation-duration: 5s;
 }
 
 #rectangle-4 {
@@ -142,6 +175,8 @@ body {
   top: 90%;
   left: 30%;
   transform: rotate(-20deg);
+  animation-name: change-1;
+  animation-duration: 6s;
 }
 
 #circle-1,
@@ -150,6 +185,8 @@ body {
 #circle-4 {
   background: #8e1dff;
   border-radius: 50%;
+  animation-name: change-3;
+  animation-duration: 4s;
 }
 
 #circle-1 {
@@ -164,7 +201,7 @@ body {
   height: 260px;
   top: 10%;
   right: 25%;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 #circle-3 {
@@ -172,7 +209,7 @@ body {
   height: 140px;
   top: 50%;
   right: 25%;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 #circle-4 {
@@ -180,7 +217,7 @@ body {
   height: 100px;
   bottom: 20%;
   left: 25%;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 #triangle-1 {
@@ -193,6 +230,8 @@ body {
   right: 5%;
   transform: rotate(20deg);
   opacity: 0.3;
+  animation-name: change-1;
+  animation-duration: 6s;
 }
 
 #triangle-2 {
@@ -204,4 +243,7 @@ body {
   bottom: 0;
   right: 5%;
   transform: rotate(50deg);
+  opacity: 0.3;
+  animation-name: change-2;
+  animation-duration: 5s;
 }
